@@ -26,7 +26,7 @@ public class PostController {
 
     @GetMapping("/{postID}")
     public Post getPost(@PathVariable("postID") int postID){
-        return postService.getPost(postID);
+        return postService.getPostById(postID);
     }
     @PostMapping
     public Post createPost(@RequestBody PostCreateRequest postRequest){

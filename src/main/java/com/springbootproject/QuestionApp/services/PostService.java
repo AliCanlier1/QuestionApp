@@ -29,7 +29,7 @@ public class PostService {
         }
     }
 
-    public Post getPost(int postID) {
+    public Post getPostById(int postID) {
         return postRepository.findById(postID).orElse(null);
     }
 
