@@ -10,6 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Like {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -26,8 +27,7 @@ public class Like {
 
     public Like(){}
 
-    public Like(int id, Post postId, User userId){
-        this.id = id;
+    public Like(Post postId, User userId){
         this.postId = postId;
         this.userId = userId;
     }

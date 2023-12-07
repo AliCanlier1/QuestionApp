@@ -54,7 +54,7 @@ public class CommentService {
             return null;
         }
         else{
-            Comment comment = new Comment(request.getId(), post, user, request.getText());
+            Comment comment = new Comment(post, user, request.getText());
             commentRepository.save(comment);
             return comment;
         }

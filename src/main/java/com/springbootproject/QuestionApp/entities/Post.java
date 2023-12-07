@@ -12,6 +12,7 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Post {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -27,8 +28,7 @@ public class Post {
     public Post() {
     }
 
-    public Post(int id, User userId, String title, String text) {
-        this.id = id;
+    public Post(User userId, String title, String text) {
         this.userId = userId;
         this.title = title;
         this.text = text;

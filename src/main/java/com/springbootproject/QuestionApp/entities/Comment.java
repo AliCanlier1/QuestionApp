@@ -10,6 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Comment {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -28,8 +29,7 @@ public class Comment {
 
     public Comment(){}
 
-    public Comment(int id, Post postId, User userId, String text){
-        this.id = id;
+    public Comment(Post postId, User userId, String text){
         this.postId = postId;
         this.userId = userId;
         this.text = text;

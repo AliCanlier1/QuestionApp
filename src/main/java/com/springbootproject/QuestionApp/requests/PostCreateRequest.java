@@ -3,18 +3,9 @@ package com.springbootproject.QuestionApp.requests;
 
 public class PostCreateRequest {
 
-    private int id;
     private String text;
     private String title;
     private int userId;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getText() {
         return text;
@@ -44,8 +35,7 @@ public class PostCreateRequest {
     public PostCreateRequest() {
     }
 
-    public PostCreateRequest(int id, String text, String title, int userId) {
-        this.id = id;
+    public PostCreateRequest(String text, String title, int userId) {
         this.text = text;
         this.title = title;
         this.userId = userId;

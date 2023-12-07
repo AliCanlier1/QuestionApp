@@ -2,8 +2,6 @@ package com.springbootproject.QuestionApp.requests;
 
 public class CommentCreateRequest {
 
-    private int id;
-
     private int postId;
 
     private int userId;
@@ -12,19 +10,10 @@ public class CommentCreateRequest {
 
     public CommentCreateRequest(){}
 
-    public CommentCreateRequest(int id, int postId, int userId, String text){
-        this.id = id;
+    public CommentCreateRequest(int postId, int userId, String text){
         this.postId = postId;
         this.userId = userId;
         this.text = text;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getPostId() {

@@ -39,7 +39,7 @@ public class PostService {
         if (user == null) {
             return null;
         } else {
-            Post post = new Post(postRequest.getId(), user, postRequest.getTitle(), postRequest.getText());
+            Post post = new Post(user, postRequest.getTitle(), postRequest.getText());
             postRepository.save(post);
             return post;
         }
