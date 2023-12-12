@@ -34,7 +34,6 @@ public class UserService {
         if (oldUser.isPresent()) {
             User currentUser = oldUser.get();
             currentUser.setUserName(newUser.getUserName());
-            currentUser.setId(newUser.getId());
             currentUser.setPassword(newUser.getPassword());
             userRepository.save(currentUser);
             return Optional.of(currentUser);
