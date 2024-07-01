@@ -4,7 +4,6 @@ This project is the backend of a Stack Overflow-style Q&A platform developed usi
 
 ## Features
 
-- User registration and login
 - Asking and answering questions
 - Voting on questions and answers
 - Commenting on questions and answers
